@@ -1,0 +1,14 @@
+&pwm0 {
+    status = "okay";
+    pinctrl-0 = <&pwm0_default>;
+    pinctrl-names = "default";
+};
+
+backlight {
+    compatible = "pwm-leds";
+    label = "Backlight";
+    pwm-leds {
+        label = "Backlight LED";
+        pwms = <&pwm0 5 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+    };
+};
