@@ -1,3 +1,5 @@
-&led_strip {
-    chain-length = <30>;
+&spi3 {
+    &led_strip {
+        chain-length = <30>;
+    };
 };
